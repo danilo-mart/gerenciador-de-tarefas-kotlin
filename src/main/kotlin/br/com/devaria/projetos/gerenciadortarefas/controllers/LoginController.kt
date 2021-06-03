@@ -7,8 +7,18 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("api/login")
 class LoginController {
+    private val LOGIN_TESTE = "admin@admin.com"
+    private val SENHA_TESTE = "Admin1234@"
 
     @GetMapping
+    fun efetuarLogin(@RequestBody dto : LoginDTO) : ResponseEntity<Any>{
+        try{
+            if(dto == null || dto.login.isNullOrBlank() || dto.login.isNullOrEmpty()
+                || dto.senha.isNullOrEmpty() || dto.senha.isNullOrBlank())
+        }
+    }
+
+
     fun olaMundo(): String{
         return "Olá mundo!"
     }
